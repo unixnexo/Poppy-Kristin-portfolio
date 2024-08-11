@@ -556,6 +556,10 @@ video {
   --tw-contain-style:  ;
 }
 
+.visible{
+  visibility: visible;
+}
+
 .absolute{
   position: absolute;
 }
@@ -573,8 +577,16 @@ video {
   margin-right: 0.75rem;
 }
 
-.mt-4{
-  margin-top: 1rem;
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+
+.mb-4{
+  margin-bottom: 1rem;
+}
+
+.mb-6{
+  margin-bottom: 1.5rem;
 }
 
 .flex{
@@ -585,41 +597,21 @@ video {
   display: grid;
 }
 
-.size-full{
-  width: 100%;
-  height: 100%;
-}
-
-.h-3\/4{
-  height: 75%;
-}
-
-.h-40{
-  height: 10rem;
-}
-
 .h-8{
   height: 2rem;
 }
 
-.h-\[70vh\]{
-  height: 70vh;
+.h-max{
+  height: -moz-max-content;
+  height: max-content;
 }
 
 .h-screen{
   height: 100vh;
 }
 
-.w-60{
-  width: 15rem;
-}
-
 .w-\[500px\]{
   width: 500px;
-}
-
-.w-full{
-  width: 100%;
 }
 
 .basis-1\/2{
@@ -673,59 +665,18 @@ video {
   overflow: hidden;
 }
 
-.overflow-y-auto{
-  overflow-y: auto;
-}
-
-.overflow-x-hidden{
-  overflow-x: hidden;
-}
-
-.rounded-xl{
-  border-radius: 0.75rem;
-}
-
-.rounded-t-xl{
-  border-top-left-radius: 0.75rem;
-  border-top-right-radius: 0.75rem;
-}
-
-.border-2{
-  border-width: 2px;
-}
-
 .bg-black{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-blue-300{
+.bg-red-200{
   --tw-bg-opacity: 1;
-  background-color: rgb(147 197 253 / var(--tw-bg-opacity));
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 
-.bg-gray-300{
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
-
-.bg-red-300{
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
-}
-
-.object-contain{
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.object-cover{
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.text-center{
-  text-align: center;
+.text-end{
+  text-align: end;
 }
 
 .text-6xl{
@@ -738,9 +689,41 @@ video {
   line-height: 1rem;
 }
 
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-all{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-1000{
+  transition-duration: 1000ms;
+}
+
+.ease-linear{
+  transition-timing-function: linear;
 }
 
 .chakra-petch-regular {
@@ -761,28 +744,104 @@ video {
   font-style: normal;
 }
 
+@supports selector(::-webkit-scrollbar) {
+  .custom-scrollbar {
+    scrollbar-gutter: stable;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    background: transparent;
+    width: 25px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgb(210, 210, 210);
+    border-radius: 100px;
+    border: 10px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgb(198, 198, 198);
+    border: 10px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:active {
+    background: rgb(164, 163, 163);
+    border: 10px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+  }
+}
+
 /*** test ***/
 
 /* * {
     outline: 1px solid red;
 } */
 
-#projects-section::after {
-  content: '';
+#projects-section::before {
+  /* content: ''; */
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 200px;
+  height: 50px;
   /* background: #000000; */
-  background: linear-gradient(to top,#000000aa, transparent);
+  /* background: linear-gradient(to top,#000000aa, transparent);  */
+  background: linear-gradient(to top,rgb(10, 9, 9), transparent);
   /* background: -webkit-linear-gradient(0deg,#000000 0%, rgba(14,14,14,0.37) 80%);
     background: -moz-linear-gradient(0deg,#000000 0%, rgba(14,14,14,0.37) 80%); */
+}
+
+#project-cards-wrapper > div {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#project-cards-wrapper > div.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.\*\:flex > *{
+  display: flex;
 }
 
 .\*\:size-\[80px\] > *{
   width: 80px;
   height: 80px;
+}
+
+.\*\:flex-col > *{
+  flex-direction: column;
+}
+
+.\*\:rounded-xl > *{
+  border-radius: 0.75rem;
+}
+
+.\*\:border-2 > *{
+  border-width: 2px;
+}
+
+.\*\:transition-all > *{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.\*\:duration-1000 > *{
+  transition-duration: 1000ms;
+}
+
+.\*\:duration-700 > *{
+  transition-duration: 700ms;
+}
+
+.\*\:ease-linear > *{
+  transition-timing-function: linear;
 }
 
 @media (min-width: 640px){
@@ -818,3 +877,48 @@ video {
     justify-content: flex-start;
   }
 }
+
+.\[\&\>\*\>\*\:not\(\:nth-child\(1\)\)\]\:flex>*>*:not(:nth-child(1)){
+  display: flex;
+}
+
+.\[\&\>\*\>\*\:not\(\:nth-child\(1\)\)\]\:grow>*>*:not(:nth-child(1)){
+  flex-grow: 1;
+}
+
+.\[\&\>\*\>\*\:not\(\:nth-child\(1\)\)\]\:items-center>*>*:not(:nth-child(1)){
+  align-items: center;
+}
+
+.\[\&\>\*\>\*\:not\(\:nth-child\(1\)\)\]\:justify-center>*>*:not(:nth-child(1)){
+  justify-content: center;
+}
+
+.first\:\[\&\>\*\>\*\>img\]\:size-full>*>*>img:first-child{
+  width: 100%;
+  height: 100%;
+}
+
+.first\:\[\&\>\*\>\*\>img\]\:object-cover>*>*>img:first-child{
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.first\:\[\&\>\*\>\*\]\:h-3\/4>*>*:first-child{
+  height: 75%;
+}
+
+.first\:\[\&\>\*\>\*\]\:w-full>*>*:first-child{
+  width: 100%;
+}
+
+.first\:\[\&\>\*\>\*\]\:overflow-hidden>*>*:first-child{
+  overflow: hidden;
+}
+
+.first\:\[\&\>\*\>\*\]\:rounded-t-xl>*>*:first-child{
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+

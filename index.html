@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="./src/css/output.css">
     <title>My name is Beatrix</title>
 </head>
-<body class="bg-black text-white chakra-petch-regular">
+<body class="bg-black text-white chakra-petch-regular custom-scrollbar">
     
-    <main class="mx-3 sm:mx-5 xl:mx-10">
+    <main class="">
 
         <!-- hero -->
-        <section class="flex justify-center items-center h-screen sm:space-x-5">
+        <section class="flex justify-center items-center h-screen sm:space-x-5 mx-3 sm:mx-5 xl:mx-10">
             <h1 class="basis-1/2 text-6xl sm:text-7xl chakra-petch-bold">My name is <br/> Poppy Kristin.</h1>
             <div class="flex flex-col relative w-[500px]"> 
                 <!-- floaty text on top of stack -->
@@ -59,86 +59,97 @@
         </section>
 
         <!-- projects -->
-        <section id="projects-section" class="relative">
-            <!-- <h2></h2> -->
-            <div class="bg-black h-[70vh] grid grid-cols-3 gap-5 overflow-x-hidden overflow-y-auto">
-
-                <div class="border-2 flex flex-col rounded-xl">
-                    <div class="w-full h-3/4 overflow-hidden rounded-t-xl">
-                        <img src="./public/img/p1.png" class="size-full object-cover" alt="project" />
+        <section id="projects-section" class="relative mx-3">
+            <h2 id="h2" class="text-5xl chakra-petch-bold mb-6 text-end text-black *:transition-all *:duration-700 *:ease-linear"><span>Some</span> <span>of</span> <span>my</span> <span>work.</span></h2>
+            <div id="project-cards-wrapper" class="bg-black grid grid-cols-3 gap-5 overflow-hidden *:border-2 *:flex *:flex-col *:rounded-xl first:[&>*>*]:w-full first:[&>*>*]:h-3/4 first:[&>*>*]:overflow-hidden first:[&>*>*]:rounded-t-xl first:[&>*>*>img]:size-full first:[&>*>*>img]:object-cover [&>*>*:not(:nth-child(1))]:grow [&>*>*:not(:nth-child(1))]:flex [&>*>*:not(:nth-child(1))]:justify-center [&>*>*:not(:nth-child(1))]:items-center">
+                <div>
+                    <div>
+                        <img src="./public/img/p1.png" alt="project" />
                     </div>
-                    <div class="text-center mt-4">
+                    <div>
                         <a target="_blank" href="https://rauno.me">rauno.me</a>
                     </div>
                 </div>
-                <div class="border-2 flex flex-col rounded-xl">
-                    <div class="w-full h-3/4 overflow-hidden rounded-t-xl">
-                        <img src="./public/img/p2.png" class="size-full object-cover" alt="project" />
+                <div>
+                    <div>
+                        <img src="./public/img/p2.png" alt="project" />
                     </div>
-                    <div class="text-center mt-4">
+                    <div>
                         <a target="_blank" href="https://kprverse.com">kprverse.com</a>
                     </div>
                 </div>
-                <div class="border-2 flex flex-col rounded-xl">
-                    <div class="w-full h-3/4 overflow-hidden rounded-t-xl">
-                        <img src="./public/img/p3.png" class="size-full object-cover" alt="project" />
+                <div>
+                    <div>
+                        <img src="./public/img/p3.png" alt="project" />
                     </div>
-                    <div class="text-center mt-4">
+                    <div>
                         <a target="_blank" href="https://shareup.app/">shareup.app</a>
                     </div>
                 </div>
-                <div class="border-2 flex flex-col rounded-xl">
-                    <div class="w-full h-3/4 overflow-hidden rounded-t-xl">
-                        <img src="./public/img/p4.png" class="size-full object-cover" alt="project" />
+                <div>
+                    <div>
+                        <img src="./public/img/p4.png" alt="project" />
                     </div>
-                    <div class="text-center mt-4">
+                    <div>
                         <a target="_blank" href="https://themes.muffingroup.com/be/burger3/">themes.muffingroup.com/be/burger3</a>
                     </div>
                 </div>
-                <div class="border-2 flex flex-col rounded-xl">
-                    <div class="w-full h-3/4 overflow-hidden rounded-t-xl">
-                        <img src="./public/img/p5.png" class="size-full object-cover" alt="project" />
+                <div>
+                    <div>
+                        <img src="./public/img/p5.png" alt="project" />
                     </div>
-                    <div class="text-center mt-4">
+                    <div>
                         <a target="_blank" href="https://www.flyhyer.com/">flyhyer.com</a>
                     </div>
                 </div>
-                <div class="border-2 flex flex-col rounded-xl">
-                    <div class="w-full h-3/4 overflow-hidden rounded-t-xl">
-                        <img src="./public/img/p6.png" class="size-full object-cover" alt="project" />
+                <div>
+                    <div>
+                        <img src="./public/img/p6.png" alt="project" />
                     </div>
-                    <div class="text-center mt-4">
+                    <div>
                         <a target="_blank" href="https://eu.mariemur.com/en-de">eu.mariemur.com</a>
                     </div>
                 </div>
-
-                <div class="w-60 h-40 bg-red-300">hi mom</div>
-                <div class="w-60 h-40 bg-blue-300">hi mom</div>
-                <div class="w-60 h-40 bg-gray-300">hi mom</div>
-                <div class="w-60 h-40 bg-red-300">hi mom</div>
-                <div class="w-60 h-40 bg-blue-300">hi mom</div>
-                <div class="w-60 h-40 bg-gray-300">hi mom</div>
-                <div class="w-60 h-40 bg-red-300">hi mom</div>
-                <div class="w-60 h-40 bg-blue-300">hi mom</div>
-                <div class="w-60 h-40 bg-gray-300">hi mom</div>
-                <div class="w-60 h-40 bg-red-300">hi mom</div>
-                <div class="w-60 h-40 bg-blue-300">hi mom</div>
-                <div class="w-60 h-40 bg-gray-300">hi mom</div>
-                <div class="w-60 h-40 bg-red-300">hi mom</div>
-                <div class="w-60 h-40 bg-blue-300">hi mom</div>
-                <div class="w-60 h-40 bg-gray-300">hi mom</div>
-                <div class="w-60 h-40 bg-red-300">hi mom</div>
-                <div class="w-60 h-40 bg-blue-300">hi mom</div>
-                <div class="w-60 h-40 bg-gray-300">hi mom</div>
-                <div class="w-60 h-40 bg-red-300">hi mom</div>
-                <div class="w-60 h-40 bg-blue-300">hi mom</div>
-                <div class="w-60 h-40 bg-gray-300">hi mom</div>
-                <div class="w-60 h-40 bg-red-300">hi mom</div>
-                <div class="w-60 h-40 bg-blue-300">hi mom</div>
-                <div class="w-60 h-40 bg-gray-300">hi mom</div>
-                <div class="w-60 h-40 bg-red-300">hi mom</div>
-                <div class="w-60 h-40 bg-blue-300">hi mom</div>
-                <div class="w-60 h-40 bg-gray-300">hi mom</div>
+                <div>
+                    <div>
+                        <img src="./public/img/p7.png" alt="project" />
+                    </div>
+                    <div>
+                        <a target="_blank" href="https://womentellwomen.com/">womentellwomen.com</a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="./public/img/p9.png" alt="project" />
+                    </div>
+                    <div>
+                        <a target="_blank" href="https://bunkercreative.co.uk/">bunkercreative.co.uk</a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="./public/img/p10.png" alt="project" />
+                    </div>
+                    <div>
+                        <a target="_blank" href="https://astrologyclub.byspotify.com/">astrologyclub.byspotify.com</a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="./public/img/p11.png" alt="project" />
+                    </div>
+                    <div>
+                        <a target="_blank" href="https://fold.money/">fold.money</a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="./public/img/p8.png" alt="project" />
+                    </div>
+                    <div>
+                        <a target="_blank" href="https://digital-cover.com/">digital-cover.com</a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -147,5 +158,6 @@
     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
+    <script defer src="./src/js/script.js"></script>
 </body>
 </html>
