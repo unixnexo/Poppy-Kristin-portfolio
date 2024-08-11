@@ -5,7 +5,7 @@ const cards = document.querySelectorAll('#project-cards-wrapper div');
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
-        const delay = index * 300;
+        const delay = index * 100;
         setTimeout(() => {
           entry.target.classList.add('revealed');
         }, delay);
@@ -13,7 +13,7 @@ const observer = new IntersectionObserver((entries, observer) => {
       }
     });
   }, {
-    threshold: 0.7
+    threshold: 0.3
 });
 
 cards.forEach(card => observer.observe(card));
@@ -66,11 +66,67 @@ observeElementInView(document.getElementById('h2'), changeTextColor, 1);
 
 /////////// test
 
+function randomLetter() {
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  return letters.charAt(Math.floor(Math.random() * letters.length));
+}
+
+function randomizeText(element, iterations, speed) {
+  const originalText = element.textContent;
+  const words = originalText.split(' ');
+  let currentIteration = 0;
+  let currentWord = 0;
+
+  const interval = setInterval(() => {
+      if (currentIteration < iterations) {
+          let randomizedText = words.map((word, i) => {
+              if (i < currentWord) {
+                  return word;
+              }
+              return word.split('').map(() => randomLetter()).join('');
+          }).join(' ');
+
+          element.textContent = randomizedText;
+          currentIteration++;
+      } else {
+          if (currentWord < words.length) {
+              currentIteration = 0;
+              currentWord++;
+          } else {
+              clearInterval(interval);
+              element.textContent = originalText;
+          }
+      }
+  }, speed);
+}
+
+document.querySelectorAll('#places-worked-section p').forEach(el => {
+  observeElementInView(el, () => randomizeText(el, 7, 30), 1);
+});
 
 
+const path = document.querySelector('#svg-under-h3 path');
+const pathLength = path.getTotalLength();
+const section = document.querySelector('#places-worked-section');
 
+const animationStartOffset = 0.2;
 
+path.style.strokeDasharray = pathLength + ' ' + pathLength;
+path.style.strokeDashoffset = pathLength;
 
+window.addEventListener('scroll', () => {
+  const sectionTop = section.offsetTop;
+  const sectionHeight = section.offsetHeight;
+  const sectionBottom = sectionTop + sectionHeight;
+
+  const scrollPosition = window.scrollY + window.innerHeight;
+  let scrollPercentage = (scrollPosition - sectionTop - sectionHeight * animationStartOffset) / (sectionHeight * (1 - animationStartOffset));
+
+  const clampedScrollPercentage = Math.min(Math.max(scrollPercentage, 0), 1);
+  const drawLength = pathLength * clampedScrollPercentage;
+
+  path.style.strokeDashoffset = pathLength - drawLength;
+});
 
 
 
