@@ -69,3 +69,88 @@ observeElementInView(document.getElementById('h2'), changeTextColor, 1);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const card = document.querySelector('.card');
+
+// document.addEventListener('mousemove', (e) => {
+//   rotateElement(e, card);
+// });
+
+// function rotateElement (event, element) {
+//   const x = event.clientX;
+//   const y = event.clientY;
+
+//   // middle of apge
+//   const middleX = window.innerWidth / 2;
+//   const middleY = window.innerHeight / 2;
+
+//   // offset from middle
+//   const offsetX = ((x - middleX) / middleX) * 20;
+//   const offsetY = ((y - middleY) / middleY) * 20;
+
+//   element.style.setProperty('--rotateX', -1 * offsetY + 'deg');
+//   element.style.setProperty('--rotateY', offsetX + 'deg');
+// }
+
+
+// const card = document.querySelector('.card');
+// let hasGoneOVerIt = false;
+
+// card.addEventListener('mouseenter', () => {
+//   setTimeout(() => {
+//     card.style.transition = 'none';
+//   }, 300);
+// });
+
+// card.addEventListener('mousemove', (e) => {
+//   rotateElement(e, card);
+// });
+
+// card.addEventListener('mouseleave', (e) => {
+//   card.style.transition = 'transform 0.2s ease-out';
+//   card.style.setProperty('--rotateX', '0deg');
+//   card.style.setProperty('--rotateY', '0deg');
+// });
+
+// function rotateElement(event, element) {
+//   const rect = element.getBoundingClientRect();
+
+//   const x = event.clientX - rect.left;
+//   const y = event.clientY - rect.top;
+
+//   // middle of card
+//   const middleX = rect.width / 2;
+//   const middleY = rect.height / 2;
+
+//   // offset from middle
+//   const offsetX = ((x - middleX) / middleX) * 20;
+//   const offsetY = ((y - middleY) / middleY) * 20;
+
+//   element.style.setProperty('--rotateX', -1 * offsetY + 'deg');
+//   element.style.setProperty('--rotateY', offsetX + 'deg');
+// }
+
+
+

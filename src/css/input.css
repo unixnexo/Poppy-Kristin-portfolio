@@ -68,4 +68,9 @@
     outline: 1px solid red;
 } */
 
+.card {
+  /* transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)); */
+  /* perspective: 100px; */
+}
+
 
