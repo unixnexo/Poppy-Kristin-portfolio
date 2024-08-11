@@ -2,7 +2,6 @@
  * project section
  */
 const cards = document.querySelectorAll('#project-cards-wrapper div');
-  
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
@@ -45,7 +44,6 @@ function observeElementInView(element, callback, threshold = 0.5, options = {}) 
 /**
  * h2 text - project section
  */
-
 function changeTextColor(element) {
     const revealClass = 'text-white';
     const child = element.querySelectorAll('span');

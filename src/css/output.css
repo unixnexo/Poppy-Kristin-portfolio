@@ -556,10 +556,6 @@ video {
   --tw-contain-style:  ;
 }
 
-.visible{
-  visibility: visible;
-}
-
 .absolute{
   position: absolute;
 }
@@ -577,14 +573,6 @@ video {
   margin-right: 0.75rem;
 }
 
-.mb-2{
-  margin-bottom: 0.5rem;
-}
-
-.mb-4{
-  margin-bottom: 1rem;
-}
-
 .mb-6{
   margin-bottom: 1.5rem;
 }
@@ -599,11 +587,6 @@ video {
 
 .h-8{
   height: 2rem;
-}
-
-.h-max{
-  height: -moz-max-content;
-  height: max-content;
 }
 
 .h-screen{
@@ -627,8 +610,8 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.grid-cols-3{
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .flex-col{
@@ -670,13 +653,13 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-red-200{
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
-}
-
 .text-end{
   text-align: end;
+}
+
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-6xl{
@@ -689,41 +672,14 @@ video {
   line-height: 1rem;
 }
 
-.text-5xl{
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.text-white{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .text-black{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.transition{
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition-all{
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.duration-1000{
-  transition-duration: 1000ms;
-}
-
-.ease-linear{
-  transition-timing-function: linear;
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .chakra-petch-regular {
@@ -774,36 +730,27 @@ video {
   }
 }
 
-/*** test ***/
-
-/* * {
-    outline: 1px solid red;
-} */
-
-#projects-section::before {
-  /* content: ''; */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  /* background: #000000; */
-  /* background: linear-gradient(to top,#000000aa, transparent);  */
-  background: linear-gradient(to top,rgb(10, 9, 9), transparent);
-  /* background: -webkit-linear-gradient(0deg,#000000 0%, rgba(14,14,14,0.37) 80%);
-    background: -moz-linear-gradient(0deg,#000000 0%, rgba(14,14,14,0.37) 80%); */
-}
+/**
+* project section
+**/
 
 #project-cards-wrapper > div {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
+  will-change: auto;
 }
 
 #project-cards-wrapper > div.revealed {
   opacity: 1;
   transform: translateY(0);
 }
+
+/*** test ***/
+
+/* * {
+    outline: 1px solid red;
+} */
 
 .\*\:flex > *{
   display: flex;
@@ -832,16 +779,16 @@ video {
   transition-duration: 150ms;
 }
 
-.\*\:duration-1000 > *{
-  transition-duration: 1000ms;
-}
-
 .\*\:duration-700 > *{
   transition-duration: 700ms;
 }
 
 .\*\:ease-linear > *{
   transition-timing-function: linear;
+}
+
+.\*\:will-change-auto > *{
+  will-change: auto;
 }
 
 @media (min-width: 640px){
@@ -856,6 +803,11 @@ video {
     margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .sm\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
+  }
+
   .sm\:text-7xl{
     font-size: 4.5rem;
     line-height: 1;
@@ -867,10 +819,20 @@ video {
   }
 }
 
+@media (min-width: 768px){
+  .md\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (min-width: 1280px){
   .xl\:mx-10{
     margin-left: 2.5rem;
     margin-right: 2.5rem;
+  }
+
+  .xl\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .xl\:justify-start{
