@@ -60,12 +60,9 @@ function changeTextColor(element) {
 }
 observeElementInView(document.getElementById('h2'), changeTextColor, 1);
 
-
-
-
-
-/////////// test
-
+/**
+ * places worked section
+ */
 function randomLetter() {
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
   return letters.charAt(Math.floor(Math.random() * letters.length));
@@ -127,6 +124,12 @@ window.addEventListener('scroll', () => {
 
   path.style.strokeDashoffset = pathLength - drawLength;
 });
+
+
+
+/////////// test
+
+
 
 
 

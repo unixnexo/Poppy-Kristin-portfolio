@@ -22,12 +22,12 @@
 }
 
 ::-moz-selection { 
-  color: red;
+  color: black;
   background: yellow;
 }
 
 ::selection {
-  color: red;
+  color: black;
   background: yellow;
 }
 
