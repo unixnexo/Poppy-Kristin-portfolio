@@ -21,6 +21,16 @@
   font-style: normal;
 }
 
+::-moz-selection { 
+  color: red;
+  background: yellow;
+}
+
+::selection {
+  color: red;
+  background: yellow;
+}
+
 @supports selector(::-webkit-scrollbar) {
   .custom-scrollbar {
     scrollbar-gutter: stable;
@@ -68,9 +78,11 @@
     outline: 1px solid red;
 } */
 
-.card {
   /* transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)); */
   /* perspective: 100px; */
-}
+
+
+
+
 
 
