@@ -101,7 +101,7 @@ document.querySelectorAll('#places-worked-section p').forEach(el => {
   observeElementInView(el, () => randomizeText(el, 7, 30), 1);
 });
 
-
+// svg behind h3
 const path = document.querySelector('#svg-under-h3 path');
 const pathLength = path.getTotalLength();
 const section = document.querySelector('#places-worked-section');
@@ -128,7 +128,29 @@ window.addEventListener('scroll', () => {
 
 
 /////////// test
+function animatePaths() {
+  const paths = document.querySelectorAll('#test path');
+  let delay = 0;
 
+  paths.forEach((path, index) => {
+    const length = path.getTotalLength();
+    
+    // Set up the initial state of the path
+    path.style.strokeDasharray = length;
+    path.style.strokeDashoffset = length;
+
+    // Apply the animation with a delay
+    setTimeout(() => {
+      path.style.transition = `stroke-dashoffset 2s ease`;
+      path.style.strokeDashoffset = '0';
+    }, delay);
+
+    // Increment the delay for the next path
+    delay += 500; // Adjust based on your needs
+  });
+}
+
+// animatePaths();
 
 
 

@@ -576,6 +576,10 @@ video {
   top: 0px;
 }
 
+.m-32{
+  margin: 8rem;
+}
+
 .mx-3{
   margin-left: 0.75rem;
   margin-right: 0.75rem;
