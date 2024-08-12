@@ -126,9 +126,11 @@ window.addEventListener('scroll', () => {
 });
 
 
-
-/////////// test
+/**
+ * know me section
+ */
 function animatePaths() {
+  document.querySelector('#drawing-self-svg').classList.remove('opacity-0');
   const paths = document.querySelectorAll('#drawing-self-svg path');
   let delay = 0;
 
@@ -147,7 +149,17 @@ function animatePaths() {
   });
 }
 
-// animatePaths();
+const knowMeSection = document.getElementById('know-me-section');
+observeElementInView(knowMeSection, animatePaths, 0.3);
+
+
+
+
+
+
+/////////// test
+
+
 
 
 
