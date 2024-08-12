@@ -129,24 +129,21 @@ window.addEventListener('scroll', () => {
 
 /////////// test
 function animatePaths() {
-  const paths = document.querySelectorAll('#test path');
+  const paths = document.querySelectorAll('#drawing-self-svg path');
   let delay = 0;
 
   paths.forEach((path, index) => {
     const length = path.getTotalLength();
     
-    // Set up the initial state of the path
     path.style.strokeDasharray = length;
     path.style.strokeDashoffset = length;
 
-    // Apply the animation with a delay
     setTimeout(() => {
       path.style.transition = `stroke-dashoffset 2s ease`;
       path.style.strokeDashoffset = '0';
     }, delay);
 
-    // Increment the delay for the next path
-    delay += 500; // Adjust based on your needs
+    delay += 2000;
   });
 }
 
