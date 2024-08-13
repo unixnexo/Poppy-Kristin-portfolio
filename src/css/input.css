@@ -82,7 +82,108 @@
   /* perspective: 100px; */
 
 
+  .poster {
+    /* min-width: 15rem;
+    max-width: 15rem; */
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    background-color: white;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.5);
+  
+    perspective: 1000px;
 
+    &:after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
+  
+      width: 100%;
+      height: 100%;
+  
+      content: "";
+  
+      background-image: linear-gradient(
+          265deg,
+          rgba(0, 0, 0, 0.2),
+          transparent 15%
+        ),
+        linear-gradient(5deg, rgba(0, 0, 0, 0.2), transparent 15%),
+        linear-gradient(-5deg, rgba(0, 0, 0, 0.1), transparent 15%),
+        linear-gradient(5deg, rgba(0, 0, 0, 0.1), transparent 15%),
+        linear-gradient(-265deg, rgba(0, 0, 0, 0.2), transparent 15%),
+        linear-gradient(-5deg, rgba(0, 0, 0, 0.2), transparent 15%),
+        linear-gradient(266deg, rgba(0, 0, 0, 0.2), transparent 15%);
+  
+      background-size: 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%,
+        50% 33.3333%, 50% 33.3333%, 50% 33.3333%;
+      background-position: left top, left top, right top, left center,
+        right center, right center, left bottom;
+    }
+  
+    /* &__img {
+      margin: 1rem;
+      width: 90%;
+      height: 95%;
+      z-index: 1;
+      filter: sepia(30%) saturate(50%);
+    } */
+  }
+
+  .poster__img {
+    margin: 1rem;
+    width: 90%;
+    height: 95%;
+    z-index: 1;
+    filter: sepia(30%) saturate(50%);
+  }
+
+
+
+
+:root {
+  --main-line-color: hsl(234, 62%, 86%);
+  --side-line-color: hsl(350, 100%, 91%);
+  --paper-color: hsl(0, 15%, 95%);
+  --ink-color: hsl(0, 0%, 12%);
+  --line-thickness: 2px;
+  --top-space: 75px;
+}
+
+.paper {
+  background: var(--paper-color);
+  /* margin: 2rem; */
+  padding: calc(var(--top-space) - 30px) 1rem 1rem 5.5rem;
+  /* font-size: 1.5rem; */
+  line-height: 1.6;
+  color: var(--ink-color);
+  background-image: 
+    /* the red line */ linear-gradient(
+      90deg,
+      transparent,
+      transparent 4rem,
+      var(--side-line-color) 4rem,
+      var(--side-line-color) 4.25rem,
+      transparent 4.25rem
+    ),
+    /*  The top space  */
+      linear-gradient(
+        var(--paper-color),
+        var(--paper-color) var(--top-space),
+        transparent var(--top-space)
+      ),
+    /* the blue lines */
+      repeating-linear-gradient(
+        transparent,
+        transparent calc(1lh - var(--line-thickness)),
+        var(--main-line-color) calc(1lh - var(--line-thickness)),
+        var(--main-line-color) 1lh,
+        transparent 1lh
+      );
+}
 
 
 
