@@ -584,6 +584,18 @@ video {
   top: 3rem;
 }
 
+.top-96{
+  top: 24rem;
+}
+
+.top-20{
+  top: 5rem;
+}
+
+.float-start{
+  float: inline-start;
+}
+
 .m-3{
   margin: 0.75rem;
 }
@@ -612,6 +624,10 @@ video {
 
 .mb-6{
   margin-bottom: 1.5rem;
+}
+
+.mr-3{
+  margin-right: 0.75rem;
 }
 
 .mt-48{
@@ -656,10 +672,6 @@ video {
 
 .h-screen{
   height: 100vh;
-}
-
-.w-32{
-  width: 8rem;
 }
 
 .w-\[100px\]{
@@ -828,8 +840,17 @@ video {
   text-align: center;
 }
 
+.text-justify{
+  text-align: justify;
+}
+
 .text-end{
   text-align: end;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-4xl{
@@ -845,11 +866,6 @@ video {
 .text-6xl{
   font-size: 3.75rem;
   line-height: 1;
-}
-
-.text-base{
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .text-sm{
@@ -1196,8 +1212,8 @@ video {
     margin-bottom: 2.5rem;
   }
 
-  .md\:basis-4\/12{
-    flex-basis: 33.333333%;
+  .md\:basis-1\/2{
+    flex-basis: 50%;
   }
 
   .md\:grid-cols-2{
@@ -1222,10 +1238,6 @@ video {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
-  }
-
-  .md\:text-\[1\.5rem\]{
-    font-size: 1.5rem;
   }
 }
 

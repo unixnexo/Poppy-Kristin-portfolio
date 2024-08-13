@@ -127,11 +127,11 @@ window.addEventListener('scroll', () => {
 
 
 /**
- * know me section
+ * draw svg when called
  */
-function animatePaths() {
-  document.querySelector('#drawing-self-svg').classList.remove('opacity-0');
-  const paths = document.querySelectorAll('#drawing-self-svg path');
+function animatePaths(elId) {
+  document.querySelector(`#${elId}`).classList.remove('opacity-0');
+  const paths = document.querySelectorAll(`#${elId} path`);
   let delay = 0;
 
   paths.forEach((path, index) => {
@@ -145,12 +145,15 @@ function animatePaths() {
       path.style.strokeDashoffset = '0';
     }, delay);
 
-    delay += 2000;
+    delay += 1000;
   });
 }
 
+/**
+ * know me section
+ */
 const knowMeSection = document.getElementById('know-me-section');
-observeElementInView(knowMeSection, animatePaths, 0.3);
+observeElementInView(knowMeSection, () => animatePaths('drawing-self-svg'), 0.3);
 
 
 
@@ -158,8 +161,25 @@ observeElementInView(knowMeSection, animatePaths, 0.3);
 
 
 /////////// test
-
-
+/**
+ * about me section
+ */
+const aboutMeSection = document.getElementById('know-me-section');
+observeElementInView(knowMeSection, () => {
+  setTimeout(() => {
+    animatePaths('my-sign-draw');
+  }, 30000);
+}, 0.9);
+observeElementInView(knowMeSection, () => {
+  setTimeout(() => {
+    animatePaths('my-dream-draw');
+  }, 10000);
+}, 0.9);
+observeElementInView(knowMeSection, () => {
+  setTimeout(() => {
+    animatePaths('destroy-dream-draw');
+  }, 40000);
+}, 0.9);
 
 
 
