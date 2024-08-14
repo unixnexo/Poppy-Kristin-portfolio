@@ -691,6 +691,10 @@ video {
   height: 100vh;
 }
 
+.h-\[90vh\]{
+  height: 90vh;
+}
+
 .w-40{
   width: 10rem;
 }
@@ -1096,6 +1100,10 @@ video {
 
 .\*\:duration-700 > *{
   transition-duration: 700ms;
+}
+
+.\*\:duration-200 > *{
+  transition-duration: 200ms;
 }
 
 .\*\:ease-linear > *{

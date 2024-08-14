@@ -13,7 +13,7 @@ const observer = new IntersectionObserver((entries, observer) => {
       }
     });
   }, {
-    threshold: 0.3
+    threshold: 0.2
 });
 
 cards.forEach(card => observer.observe(card));
@@ -58,7 +58,7 @@ function changeTextColor(element) {
         child[2].classList.add(revealClass);
     }, 1000);
 }
-observeElementInView(document.getElementById('h2'), changeTextColor, 1);
+observeElementInView(document.getElementById('h2'), changeTextColor, 0.3);
 
 /**
  * places worked section
