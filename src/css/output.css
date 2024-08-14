@@ -564,6 +564,14 @@ video {
   position: relative;
 }
 
+.-bottom-\[110vh\]{
+  bottom: -110vh;
+}
+
+.-bottom-\[95vh\]{
+  bottom: -95vh;
+}
+
 .-left-\[43px\]{
   left: -43px;
 }
@@ -572,8 +580,16 @@ video {
   top: -1.25rem;
 }
 
+.left-1\/2{
+  left: 50%;
+}
+
 .right-0{
   right: 0px;
+}
+
+.right-1\/2{
+  right: 50%;
 }
 
 .top-0{
@@ -584,52 +600,8 @@ video {
   top: 3rem;
 }
 
-.top-96{
-  top: 24rem;
-}
-
-.bottom-96{
-  bottom: 24rem;
-}
-
-.-bottom-96{
-  bottom: -24rem;
-}
-
-.-bottom-20{
-  bottom: -5rem;
-}
-
-.-bottom-10{
-  bottom: -2.5rem;
-}
-
-.-bottom-5{
-  bottom: -1.25rem;
-}
-
-.-bottom-0{
-  bottom: -0px;
-}
-
-.bottom-0{
-  bottom: 0px;
-}
-
-.-bottom-\[300px\]{
-  bottom: -300px;
-}
-
-.-bottom-\[400px\]{
-  bottom: -400px;
-}
-
-.-bottom-\[600px\]{
-  bottom: -600px;
-}
-
-.-bottom-\[700px\]{
-  bottom: -700px;
+.-top-0{
+  top: -0px;
 }
 
 .float-start{
@@ -714,6 +686,10 @@ video {
   height: 100vh;
 }
 
+.w-40{
+  width: 10rem;
+}
+
 .w-\[100px\]{
   width: 100px;
 }
@@ -731,30 +707,6 @@ video {
   width: fit-content;
 }
 
-.w-3{
-  width: 0.75rem;
-}
-
-.w-5{
-  width: 1.25rem;
-}
-
-.w-40{
-  width: 10rem;
-}
-
-.w-2{
-  width: 0.5rem;
-}
-
-.w-32{
-  width: 8rem;
-}
-
-.w-48{
-  width: 12rem;
-}
-
 .flex-shrink{
   flex-shrink: 1;
 }
@@ -765,6 +717,16 @@ video {
 
 .basis-\[65\%\]{
   flex-basis: 65%;
+}
+
+.-translate-x-1\/2{
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-1\/2{
+  --tw-translate-x: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .-rotate-12{
@@ -792,10 +754,6 @@ video {
 
 .flex-col{
   flex-direction: column;
-}
-
-.flex-col-reverse{
-  flex-direction: column-reverse;
 }
 
 .flex-wrap{
@@ -852,10 +810,6 @@ video {
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
-.space-y-reverse > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 1;
-}
-
 .whitespace-nowrap{
   white-space: nowrap;
 }
@@ -877,6 +831,31 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-red-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
+.bg-red-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
+
+.bg-blue-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
+}
+
+.bg-blue-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 197 253 / var(--tw-bg-opacity));
+}
+
+.bg-blue-900{
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
+}
+
 .p-2{
   padding: 0.5rem;
 }
@@ -896,18 +875,12 @@ video {
   padding-bottom: 0.75rem;
 }
 
-.px-0{
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-.px-10{
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
 .pt-5{
   padding-top: 1.25rem;
+}
+
+.pb-52{
+  padding-bottom: 13rem;
 }
 
 .text-center{
@@ -973,10 +946,6 @@ video {
 
 .opacity-0{
   opacity: 0;
-}
-
-.opacity-100{
-  opacity: 1;
 }
 
 .transition{
@@ -1307,36 +1276,21 @@ video {
     bottom: 0px;
   }
 
-  .lg\:w-40{
-    width: 10rem;
+  .lg\:left-0{
+    left: 0px;
   }
 
-  .lg\:w-4{
-    width: 1rem;
+  .lg\:right-0{
+    right: 0px;
   }
 
-  .lg\:w-48{
-    width: 12rem;
+  .lg\:translate-x-0{
+    --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .lg\:flex-row{
     flex-direction: row;
-  }
-
-  .lg\:items-start{
-    align-items: flex-start;
-  }
-
-  .lg\:items-end{
-    align-items: flex-end;
-  }
-
-  .lg\:items-center{
-    align-items: center;
-  }
-
-  .lg\:items-baseline{
-    align-items: baseline;
   }
 
   .lg\:justify-center{
@@ -1373,10 +1327,6 @@ video {
   .xl\:mx-10{
     margin-left: 2.5rem;
     margin-right: 2.5rem;
-  }
-
-  .xl\:w-48{
-    width: 12rem;
   }
 
   .xl\:grid-cols-3{

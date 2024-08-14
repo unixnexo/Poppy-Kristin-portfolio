@@ -169,17 +169,17 @@ observeElementInView(knowMeSection, () => {
   setTimeout(() => {
     animatePaths('my-sign-draw');
   }, 30000);
-}, 0.9);
+}, 0.3);
 observeElementInView(knowMeSection, () => {
   setTimeout(() => {
     animatePaths('my-dream-draw');
   }, 10000);
-}, 0.9);
+}, 0.3);
 observeElementInView(knowMeSection, () => {
   setTimeout(() => {
     animatePaths('destroy-dream-draw');
   }, 40000);
-}, 0.9);
+}, 0.3);
 
 
 
