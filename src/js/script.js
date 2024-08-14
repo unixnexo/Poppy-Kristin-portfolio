@@ -155,12 +155,6 @@ function animatePaths(elId) {
 const knowMeSection = document.getElementById('know-me-section');
 observeElementInView(knowMeSection, () => animatePaths('drawing-self-svg'), 0.3);
 
-
-
-
-
-
-/////////// test
 /**
  * about me section
  */
@@ -180,6 +174,12 @@ observeElementInView(knowMeSection, () => {
     animatePaths('destroy-dream-draw');
   }, 40000);
 }, 0.3);
+
+
+
+
+/////////// test
+
 
 
 
