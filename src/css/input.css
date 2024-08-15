@@ -117,16 +117,33 @@
 
 
 /*** test ***/
-/* * {
-  outline: 1px solid red;
-} */
+#contact-me-card {
+  transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
+  perspective: 5000px;
+  position: relative;
+  transform-style: preserve-3d;
+}
 
-  /* transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)); */
-  /* perspective: 100px; */
+#contact-me-card::after,
+#contact-me-card::before {
+  content: '';
+  position: absolute;
+  border-radius: inherit;
+}
 
+#contact-me-card::after {
+ inset: -1.5rem;
+ background: linear-gradient(-45deg, red, blue);
+ transform: translateZ(-50px);
+}
 
-
-
+#contact-me-card::before {
+  inset: -1rem;
+  background-color: black;
+  transform: translateZ(-49px);
+  filter: blur(15px);
+  opacity: 0.5;
+ }
 
 
 

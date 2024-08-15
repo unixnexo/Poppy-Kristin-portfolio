@@ -202,27 +202,27 @@ observeElementInView(knowMeSection, () => {
 
 
 
-// const card = document.querySelector('.card');
+const card = document.querySelector('#contact-me-card');
 
-// document.addEventListener('mousemove', (e) => {
-//   rotateElement(e, card);
-// });
+document.addEventListener('mousemove', (e) => {
+  rotateElement(e, card);
+});
 
-// function rotateElement (event, element) {
-//   const x = event.clientX;
-//   const y = event.clientY;
+function rotateElement (event, element) {
+  const x = event.clientX;
+  const y = event.clientY;
 
-//   // middle of apge
-//   const middleX = window.innerWidth / 2;
-//   const middleY = window.innerHeight / 2;
+  // middle of apge
+  const middleX = window.innerWidth / 2;
+  const middleY = window.innerHeight / 2;
 
-//   // offset from middle
-//   const offsetX = ((x - middleX) / middleX) * 20;
-//   const offsetY = ((y - middleY) / middleY) * 20;
+  // offset from middle
+  const offsetX = ((x - middleX) / middleX) * 20;
+  const offsetY = ((y - middleY) / middleY) * 20;
 
-//   element.style.setProperty('--rotateX', -1 * offsetY + 'deg');
-//   element.style.setProperty('--rotateY', offsetX + 'deg');
-// }
+  element.style.setProperty('--rotateX', -1 * offsetY + 'deg');
+  element.style.setProperty('--rotateY', offsetX + 'deg');
+}
 
 
 // const card = document.querySelector('.card');
