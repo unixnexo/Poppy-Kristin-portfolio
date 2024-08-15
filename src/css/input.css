@@ -133,7 +133,7 @@
 
 #contact-me-card::after {
  inset: -1.5rem;
- background: linear-gradient(-45deg, red, blue);
+ background: linear-gradient(-45deg, #0A2463, #3E92CC);
  transform: translateZ(-50px);
 }
 
