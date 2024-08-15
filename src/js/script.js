@@ -177,31 +177,9 @@ observeElementInView(knowMeSection, () => {
 
 
 
-
-/////////// test
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/**
+ * contact me section
+ */
 const card = document.querySelector('#contact-me-card');
 
 document.addEventListener('mousemove', (e) => {
@@ -225,6 +203,11 @@ function rotateElement (event, element) {
 }
 
 
+
+
+
+
+/////////// test
 // const card = document.querySelector('.card');
 // let hasGoneOVerIt = false;
 
