@@ -220,13 +220,33 @@ function rotateElement (event, element) {
 /**
  * navigation menu
  */
-document.getElementById('nav-menu').classList.remove('translate-y-32');
+const navMenu = document.getElementById('nav-menu');
+navMenu.classList.remove('translate-y-32');
 
+// show/hide as scroll
+const hideTopListSmSc = 'translate-y-32';
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', function() {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  let scrollDifference = Math.abs(scrollTop - lastScrollTop);
+
+  // Only proceed if scrolled more than 100 pixels
+  if (scrollDifference > 100) {
+    if (scrollTop > lastScrollTop) {
+      navMenu.classList.add(hideTopListSmSc);
+    } else {
+      navMenu.classList.remove(hideTopListSmSc);
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  }
+});
 
 
 
 
 /////////// test
+
 
 
 
