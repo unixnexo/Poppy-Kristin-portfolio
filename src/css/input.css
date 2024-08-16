@@ -118,6 +118,7 @@
 **/
 #contact-me-card {
   transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
+  -webkit-transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
   perspective: 5000px;
   -webkit-perspective: 5000px;
   position: relative;
@@ -130,20 +131,20 @@
   content: '';
   position: absolute;
   border-radius: inherit;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 }
 
 #contact-me-card::after {
  inset: -1.5rem;
  background: linear-gradient(-45deg, #0A2463, #3E92CC);
  transform: translateZ(-50px);
+ -webkit-transform: translateZ(-50px);
 }
 
 #contact-me-card::before {
   inset: -1rem;
   background-color: black;
   transform: translateZ(-49px);
+  -webkit-transform: translateZ(-49px);
   filter: blur(15px);
   opacity: 0.5;
 }
