@@ -724,10 +724,6 @@ video {
   width: 350px;
 }
 
-.w-\[400px\]{
-  width: 400px;
-}
-
 .w-\[500px\]{
   width: 500px;
 }
@@ -1088,6 +1084,7 @@ video {
   perspective: 5000px;
   position: relative;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 
 #contact-me-card::after,
@@ -1138,6 +1135,10 @@ video {
 
 .\*\:overflow-hidden > *{
   overflow: hidden;
+}
+
+.\*\:whitespace-nowrap > *{
+  white-space: nowrap;
 }
 
 .\*\:rounded-xl > *{
@@ -1202,6 +1203,10 @@ video {
 
   .sm\:w-\[165px\]{
     width: 165px;
+  }
+
+  .sm\:w-\[400px\]{
+    width: 400px;
   }
 
   .sm\:space-x-5 > :not([hidden]) ~ :not([hidden]){

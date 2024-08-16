@@ -13,7 +13,7 @@ const observer = new IntersectionObserver((entries, observer) => {
       }
     });
   }, {
-    threshold: 0.2
+    threshold: 0.1
 });
 
 cards.forEach(card => observer.observe(card));
@@ -22,7 +22,7 @@ cards.forEach(card => observer.observe(card));
 /**
  * General observer
  */
-function observeElementInView(element, callback, threshold = 0.5, options = {}) {
+function observeElementInView(element, callback, threshold = 0.1, options = {}) {
   const observerOptions = {
     threshold,
     ...options,
@@ -49,16 +49,16 @@ function changeTextColor(element) {
     const child = element.querySelectorAll('span');
     child[0].classList.add(revealClass);
     setTimeout(() => {
-        child[3].classList.add(revealClass);
+      child[3].classList.add(revealClass);
     }, 500);
     setTimeout(() => {
-        child[1].classList.add(revealClass);
+      child[1].classList.add(revealClass);
     }, 800);
     setTimeout(() => {
-        child[2].classList.add(revealClass);
+      child[2].classList.add(revealClass);
     }, 1000);
 }
-observeElementInView(document.getElementById('h2'), changeTextColor, 0.3);
+observeElementInView(document.getElementById('h2'), changeTextColor, 0.1);
 
 /**
  * places worked section
@@ -69,6 +69,9 @@ function randomLetter() {
 }
 
 function randomizeText(element, iterations, speed) {
+  //
+  element.classList.add('whitespace-nowrap');
+
   const originalText = element.textContent;
   const words = originalText.split(' ');
   let currentIteration = 0;
@@ -95,6 +98,9 @@ function randomizeText(element, iterations, speed) {
           }
       }
   }, speed);
+
+  //
+  // element.classList.remove = 'whitespace-nowrap';
 }
 
 document.querySelectorAll('#places-worked-section p').forEach(el => {
@@ -149,15 +155,13 @@ function animatePaths(elId) {
   });
 }
 
+
 /**
  * know me section
  */
 const knowMeSection = document.getElementById('know-me-section');
 observeElementInView(knowMeSection, () => animatePaths('drawing-self-svg'), 0.3);
 
-/**
- * about me section
- */
 const aboutMeSection = document.getElementById('know-me-section');
 observeElementInView(knowMeSection, () => {
   setTimeout(() => {

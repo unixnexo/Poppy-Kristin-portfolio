@@ -121,6 +121,7 @@
   perspective: 5000px;
   position: relative;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 
 #contact-me-card::after,
