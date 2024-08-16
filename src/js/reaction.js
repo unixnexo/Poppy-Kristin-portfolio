@@ -11,11 +11,11 @@ function createRipple(el, X, Y) {
   const offsetY = Y - rect.top;
 
   const style = window.getComputedStyle(el);
-  const paddingLeft = parseFloat(style.paddingLeft);
-  const paddingTop = parseFloat(style.paddingTop);
+  const paddingLeft = parseFloat(style.paddingLeft); // this didn't work  
+  const paddingTop = parseFloat(style.paddingTop); // this didn't work 
 
-  circle.style.left = `${offsetX - radius - paddingLeft}px`;
-  circle.style.top = `${offsetY - radius - paddingTop}px`;
+  circle.style.left = `${offsetX - radius  - 2}px`;
+  circle.style.top = `${offsetY - radius - 2}px`;
 
   circle.classList.add("ripple");
 
@@ -38,19 +38,19 @@ if (rippleElements.length !== 0) {
     el.style.position = 'relative';
     el.style.display = 'inline-block';
 
-    // mouse
-    el.addEventListener('click', (e) => {
-      createRipple(el, e.clientX, e.clientY);
-    });
-
-    // touch
-    el.addEventListener('touchstart', (e) => {
-      // Prevent multiple touches from creating multiple ripples
-      if (el.querySelector('.ripple')) return;
-
-      createRipple(el, e.touches[0].clientX, e.touches[0].clientY);
-    });  
-
+    if ("ontouchstart" in document.documentElement) {
+      // touch
+      el.addEventListener('touchstart', (e) => {
+        // Prevent multiple touches from creating multiple ripples
+        if (el.querySelector('.ripple')) return;
+        createRipple(el, e.touches[0].clientX, e.touches[0].clientY);
+      });  
+    } else {
+      // mouse
+      el.addEventListener('click', (e) => {
+        createRipple(el, e.clientX, e.clientY);
+      });
+    }
   });
 }
 

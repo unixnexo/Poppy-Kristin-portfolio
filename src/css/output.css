@@ -1152,8 +1152,6 @@ video {
   opacity: 0.5;
 }
 
-/*** test ***/
-
 /* ripple - reaction library */
 
 span.ripple {
@@ -1170,6 +1168,8 @@ span.ripple {
     opacity: 0;
   }
 }
+
+/*** test ***/
 
 .\*\:flex > *{
   display: flex;
@@ -1234,11 +1234,6 @@ span.ripple {
 
 .\*\:will-change-auto > *{
   will-change: auto;
-}
-
-.hover\:\*\:bg-gray-200 > *:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px){
@@ -1489,6 +1484,9 @@ span.ripple {
 .\[\&\>\*\>svg\]\:stroke-black>*>svg{
   stroke: #000;
 }
+
+
+
 
 
 

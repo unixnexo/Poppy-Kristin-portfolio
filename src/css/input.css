@@ -149,12 +149,6 @@
   opacity: 0.5;
 }
 
-
-
-
-/*** test ***/
-
-
 /* ripple - reaction library */
 span.ripple {
   position: absolute; 
@@ -170,6 +164,14 @@ span.ripple {
     opacity: 0;
   }
 }
+
+
+
+
+/*** test ***/
+
+
+
 
 
 
