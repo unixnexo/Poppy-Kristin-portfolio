@@ -957,6 +957,10 @@ video {
   transition-duration: 150ms;
 }
 
+.ease-in-out{
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .ease-out{
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
@@ -996,25 +1000,25 @@ video {
 
   .custom-scrollbar::-webkit-scrollbar {
     background: transparent;
-    width: 25px;
+    width: 15px;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
     background: rgb(210, 210, 210);
     border-radius: 100px;
-    border: 10px solid rgba(0, 0, 0, 0);
+    border: 5px solid rgba(0, 0, 0, 0);
     background-clip: padding-box;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: rgb(198, 198, 198);
-    border: 10px solid rgba(0, 0, 0, 0);
+    border: 5px solid rgba(0, 0, 0, 0);
     background-clip: padding-box;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb:active {
     background: rgb(164, 163, 163);
-    border: 10px solid rgba(0, 0, 0, 0);
+    border: 5px solid rgba(0, 0, 0, 0);
     background-clip: padding-box;
   }
 }
@@ -1082,6 +1086,7 @@ video {
 #contact-me-card {
   transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
   perspective: 5000px;
+  -webkit-perspective: 5000px;
   position: relative;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
@@ -1092,6 +1097,8 @@ video {
   content: '';
   position: absolute;
   border-radius: inherit;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 #contact-me-card::after {

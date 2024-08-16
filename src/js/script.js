@@ -60,6 +60,7 @@ function changeTextColor(element) {
 }
 observeElementInView(document.getElementById('h2'), changeTextColor, 0.1);
 
+
 /**
  * places worked section
  */
@@ -188,6 +189,15 @@ const card = document.querySelector('#contact-me-card');
 
 document.addEventListener('mousemove', (e) => {
   rotateElement(e, card);
+});
+
+document.addEventListener('mouseleave', () => {
+  card.style.transition = 'all .5s ease-in-out';
+  card.style.setProperty('--rotateX', '0deg');
+  card.style.setProperty('--rotateY', '0deg');
+  setTimeout(() => {
+    card.style.transition = 'none';
+  }, 500);
 });
 
 function rotateElement (event, element) {
