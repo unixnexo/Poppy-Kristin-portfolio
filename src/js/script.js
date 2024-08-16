@@ -217,11 +217,20 @@ function rotateElement (event, element) {
 }
 
 
+/**
+ * navigation menu
+ */
+document.getElementById('nav-menu').classList.remove('translate-y-32');
+
 
 
 
 
 /////////// test
+
+
+
+
 // const card = document.querySelector('.card');
 // let hasGoneOVerIt = false;
 
