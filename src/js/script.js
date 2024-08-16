@@ -69,8 +69,7 @@ function randomLetter() {
 }
 
 function randomizeText(element, iterations, speed) {
-  //
-  element.classList.add('whitespace-nowrap');
+  document.getElementById('places-worked-section').classList.add('whitespace-nowrap');
 
   const originalText = element.textContent;
   const words = originalText.split(' ');
@@ -99,8 +98,9 @@ function randomizeText(element, iterations, speed) {
       }
   }, speed);
 
-  //
-  // element.classList.remove = 'whitespace-nowrap';
+  setTimeout(() => {
+    document.getElementById('places-worked-section').classList.remove('whitespace-nowrap');
+  }, speed + 1000);
 }
 
 document.querySelectorAll('#places-worked-section p').forEach(el => {
