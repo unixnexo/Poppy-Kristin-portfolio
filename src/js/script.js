@@ -217,7 +217,7 @@ function rotateElement (event, element) {
   element.style.setProperty('--rotateY', offsetX + 'deg');
 }
 
-//
+// scale up the card
 function revealContactCard() {
   cardSection.classList.remove('scale-75');
 }
