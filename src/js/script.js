@@ -185,6 +185,7 @@ observeElementInView(knowMeSection, () => {
 /**
  * contact me section
  */
+const cardSection = document.querySelector('#contact-me');
 const card = document.querySelector('#contact-me-card');
 
 document.addEventListener('mousemove', (e) => {
@@ -215,6 +216,12 @@ function rotateElement (event, element) {
   element.style.setProperty('--rotateX', -1 * offsetY + 'deg');
   element.style.setProperty('--rotateY', offsetX + 'deg');
 }
+
+//
+function revealContactCard() {
+  cardSection.classList.remove('scale-75');
+}
+observeElementInView(cardSection, revealContactCard, 0.3);
 
 
 /**
