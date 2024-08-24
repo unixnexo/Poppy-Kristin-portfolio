@@ -116,28 +116,32 @@
 /**
 * contact me section
 **/
-#contact-me-card {
-  transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
-  -webkit-transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
-  perspective: 5000px;
-  -webkit-perspective: 5000px;
-  position: relative;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
+@media only screen and (min-width:640px) {
+  #contact-me-card {
+    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
+    -webkit-transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
+    perspective: 5000px;
+    -webkit-perspective: 5000px;
+    position: relative;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+  }
 }
 
-#contact-me-card::after,
-#contact-me-card::before {
-  content: '';
-  position: absolute;
-  border-radius: inherit;
+@media only screen and (min-width:640px) {
+  #contact-me-card::after,
+  #contact-me-card::before {
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+  }
 }
 
 #contact-me-card::after {
- inset: -1.5rem;
- background: linear-gradient(-45deg, #0A2463, #3E92CC);
- transform: translateZ(-50px);
- -webkit-transform: translateZ(-50px);
+  inset: -1.5rem;
+  background: linear-gradient(-45deg, #0A2463, #3E92CC);
+  transform: translateZ(-50px);
+  -webkit-transform: translateZ(-50px);
 }
 
 #contact-me-card::before {
@@ -149,7 +153,10 @@
   opacity: 0.5;
 }
 
-/* ripple - reaction library */
+
+/**
+* ripple - reaction library
+**/
 span.ripple {
   position: absolute; 
   border-radius: 50%;

@@ -659,10 +659,6 @@ video {
   margin-top: auto;
 }
 
-.mt-72{
-  margin-top: 18rem;
-}
-
 .inline-block{
   display: inline-block;
 }
@@ -1131,21 +1127,23 @@ video {
 * contact me section
 **/
 
-#contact-me-card {
-  transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
-  -webkit-transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
-  perspective: 5000px;
-  -webkit-perspective: 5000px;
-  position: relative;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-}
+@media only screen and (min-width:640px) {
+  #contact-me-card {
+    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
+    -webkit-transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
+    perspective: 5000px;
+    -webkit-perspective: 5000px;
+    position: relative;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+  }
 
-#contact-me-card::after,
-#contact-me-card::before {
-  content: '';
-  position: absolute;
-  border-radius: inherit;
+  #contact-me-card::after,
+  #contact-me-card::before {
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+  }
 }
 
 #contact-me-card::after {
@@ -1164,7 +1162,9 @@ video {
   opacity: 0.5;
 }
 
-/* ripple - reaction library */
+/**
+* ripple - reaction library
+**/
 
 span.ripple {
   position: absolute;
@@ -1258,17 +1258,8 @@ span.ripple {
     margin-right: 1.25rem;
   }
 
-  .sm\:my-72{
-    margin-top: 18rem;
-    margin-bottom: 18rem;
-  }
-
   .sm\:mb-5{
     margin-bottom: 1.25rem;
-  }
-
-  .sm\:flex{
-    display: flex;
   }
 
   .sm\:h-\[190px\]{
@@ -1333,11 +1324,6 @@ span.ripple {
 }
 
 @media (min-width: 768px){
-  .md\:my-72{
-    margin-top: 18rem;
-    margin-bottom: 18rem;
-  }
-
   .md\:mb-10{
     margin-bottom: 2.5rem;
   }
